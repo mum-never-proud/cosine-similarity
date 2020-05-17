@@ -1,9 +1,9 @@
-function dotProduct(a, b) {
-  const len = Math.min(a.length, b.length);
+function dotProduct(x, y) {
+  const len = Math.min(x.length, y.length);
   let result = 0, i = 0;
 
   for (; i < len; i++) {
-    result += a[i] * b[i];
+    result += x[i] * y[i];
   }
 
   return result;
@@ -14,14 +14,16 @@ function normalize(x) {
 }
 
 function assertArray(x) {
-  if (x.constructor.name !== 'Array') {
-    throw new TypeError('cosine similarity can be computed only between two arrays');
+  if (!x || x.constructor.name !== 'Array') {
+    throw new TypeError('cosine similarity can be computed only between two array of numbers');
   }
 }
 
-export default function (x, y) {
+module.exports = function (x, y) {
   assertArray(x);
   assertArray(y);
 
-  return dotProduct * (normalize(x) * normalize(y));
+  return Number(
+    (dotProduct(x, y) / (normalize(x) * normalize(y))).toFixed(3)
+  );
 }

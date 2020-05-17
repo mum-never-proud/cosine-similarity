@@ -6,7 +6,8 @@
   "scripts": {
     "build": "./node_modules/.bin/parcel build cosine-similarity.js --global similarity",
     "dev": "./node_modules/.bin/parcel watch cosine-similarity.js --global similarity",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest",
+    "test:coverage": "./node_modules/.bin/jest --coverage"
   },
   "repository": {
     "type": "git",
