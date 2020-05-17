@@ -1,0 +1,32 @@
+{
+  "name": "cosine-similarity",
+  "version": "1.0.0",
+  "description": "compute cosine similarity between 2 array of numbers",
+  "main": "cosine-similarity.js",
+  "scripts": {
+    "build": "./node_modules/.bin/parcel build cosine-similarity.js --global similarity",
+    "dev": "./node_modules/.bin/parcel watch cosine-similarity.js --global similarity",
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mum-never-proud/cosine-similarity.git"
+  },
+  "keywords": [
+    "cosine",
+    "similarity",
+    "cos",
+    "vectors",
+    "text"
+  ],
+  "author": "mum-never-proud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mum-never-proud/cosine-similarity/issues"
+  },
+  "homepage": "https://github.com/mum-never-proud/cosine-similarity#readme",
+  "devDependencies": {
+    "jest": "26.0.1",
+    "parcel": "1.12.4"
+  }
+}
